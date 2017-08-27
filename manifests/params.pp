@@ -68,6 +68,10 @@ Detected lsbdistcodename is <${::lsbdistcodename}>.")
           $monit_version = '5'
           $config_file   = '/etc/monitrc'
         }
+        '2017': { # AWS Linux
+          $monit_version = '5'
+          $config_file   = '/etc/monit.conf'
+        }
         default: {
           fail("monit supports EL 5, 6 and 7. Detected operatingsystemmajrelease is <${::operatingsystemmajrelease}>.")
         }
